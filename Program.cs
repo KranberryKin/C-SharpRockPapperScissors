@@ -16,7 +16,7 @@ namespace RockPaperScissors
             */
             var playingRPS = true;
             while (playingRPS) {
-                System.Console.WriteLine("What do you Choose? R/P/S");
+                System.Console.WriteLine("What do you Choose? \n Press 'R' for Rock \n Press 'P' for Papper \n Press 'S' for Scissors");
                 var CpuChoice = new play().shoot();
                 var choice = Console.ReadKey();
                 switch (choice.Key) {
@@ -155,7 +155,7 @@ namespace RockPaperScissors
                      break;
                     }
                 }
-                System.Console.WriteLine("Wanna Play Again? Y/n");
+                System.Console.WriteLine("Wanna Play Again? \n Press 'Y' for Yes \n Press 'N' for no");
                 var endChoice = Console.ReadKey();
                 if (endChoice.Key != ConsoleKey.Y){
                     playingRPS = false;
