@@ -18,7 +18,7 @@ namespace RockPaperScissors
             var playerWin = 0;
             var playingRPS = true;
             while (playingRPS) {
-                System.Console.WriteLine("What do you Choose? \n Press 'R' for Rock \n Press 'P' for Papper \n Press 'S' for Scissors");
+                System.Console.WriteLine("\n What do you Choose? \n Press 'R' for Rock \n Press 'P' for Papper \n Press 'S' for Scissors");
                 var CpuChoice = new play().shoot();
                 var choice = Console.ReadKey();
                 switch (choice.Key) {
@@ -61,7 +61,7 @@ namespace RockPaperScissors
           (_____)                           (_____) 
           (____)                            (____)  
     ---.__(___)                       ---.__(___)   
-                                    Scissors!");
+                                    Rock!");
                             break;
                         }
                         System.Console.WriteLine(ConsoleKey.R);
@@ -118,7 +118,7 @@ namespace RockPaperScissors
                         if (CpuChoice == ConsoleKey.R){
                             System.Console.WriteLine(@"
                             You Lose!
-                             Cpu Chose
+    You Chose Scissors!                         Cpu Chose
     _______                      _______
 ---'   ____)____             ---'   ____)
            ______)                (_____)
@@ -163,11 +163,11 @@ namespace RockPaperScissors
                      break;
                     }
                 }
-                System.Console.WriteLine("Wanna Play Again? \n Press 'Y' for Yes \n Press 'N' for no");
+                System.Console.WriteLine("\n Wanna Play Again? \n Press 'Y' for Yes \n Press 'N' for no");
                 var endChoice = Console.ReadKey();
                 if (endChoice.Key != ConsoleKey.Y){
                     playingRPS = false;
-                    System.Console.WriteLine("Score Board \n You Won :" + playerWin + "\n Cpu Won :" + comWin);
+                    System.Console.WriteLine("\n Score Board \n You Won :" + playerWin + "\n Cpu Won :" + comWin);
                 }
             }
         }
