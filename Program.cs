@@ -14,6 +14,8 @@ namespace RockPaperScissors
                 A statement that the user is allow to choose
                 A function that compares the users choice with the cpu choice and declares winner.
             */
+            var comWin = 0;
+            var playerWin = 0;
             var playingRPS = true;
             while (playingRPS) {
                 System.Console.WriteLine("What do you Choose? \n Press 'R' for Rock \n Press 'P' for Papper \n Press 'S' for Scissors");
@@ -32,6 +34,7 @@ namespace RockPaperScissors
           (____)                             _______)
     ---.__(___)                   ---.__________)
                                        Papper!");
+                            comWin += 1;
                             break;
                         }
                         if (CpuChoice == ConsoleKey.S){
@@ -45,6 +48,7 @@ namespace RockPaperScissors
           (____)                        (____)
     ---.__(___)                   ---.__(___)
                                     Scissors!");
+                                    playerWin += 1;
                             break;
                         }
                         if (CpuChoice == ConsoleKey.R){
@@ -76,6 +80,7 @@ namespace RockPaperScissors
             _______)                         (____)
  ---.__________)                      ---.__(___)
                                      Scissors!");
+                            comWin += 1;
                             break;
                         }
                         if (CpuChoice == ConsoleKey.R){
@@ -89,6 +94,7 @@ namespace RockPaperScissors
             _______)                    (____)
  ---.__________)                  ---.__(___)
                                       Rock!");
+                                    playerWin += 1;
                             break;
                         }
                         if (CpuChoice == ConsoleKey.P){
@@ -120,6 +126,7 @@ namespace RockPaperScissors
        (____)                     (____)
 ---.__(___)                 ---.__(___)
                               Rock!");
+                            comWin += 1;
                             break;
                         }
                         if (CpuChoice == ConsoleKey.P){
@@ -133,6 +140,7 @@ namespace RockPaperScissors
        (____)                                        _______)
 ---.__(___)                               ---.__________)
                                       Papper!");
+                                    playerWin += 1;
                             break;
                         }
                         if (CpuChoice == ConsoleKey.S){
@@ -159,6 +167,7 @@ namespace RockPaperScissors
                 var endChoice = Console.ReadKey();
                 if (endChoice.Key != ConsoleKey.Y){
                     playingRPS = false;
+                    System.Console.WriteLine("Score Board \n You Won :" + playerWin + "\n Cpu Won :" + comWin);
                 }
             }
         }
